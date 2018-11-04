@@ -3,11 +3,9 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 script:
-  - echo "What tests?! This is a hackathon!" && exit 0
+  - echo "What tests?! This is a hackathon!"
 deploy:
   provider: heroku
   api_key:
-    secure: "vXUyN5S5mnwADMlApZtRNXWfGmc1vSaLicFezqHI1k9HIF1m4a2/nE2vOY6pXDsR78rYlklEkxCrr/s7iUXdj1T6hVV+JJyjhy+Qii9GGKfWrviuZErooJ/tOzK4kc8YMLkzmQIFKx4fSGc6HJZQ+V5ZD42QTCxiP9DnC8MM88CWagzzCfgovrxpBNh3VVNspYlBdPTCwvr52uDKZ0Hh/R8Gs0NS79BBKdQeG7J097ksLnPhPDY36eXWqd51fKx31at29wchp6puAiupH+lGyr/wQmpWMbKdTgpVM1ZDeDlX9w+0wNiqhqwE7sKBH1LUGzfaJl1XHXdxldJkDg939CFGRdTZRA/cgprlqA+Jc6JHtB0mxD4us00xWZDPCxCbG5Pb7z+C+9eK5+Oa0YhQksJal7Nn7bNh3dJk1wWj7eoTaX/8wHkS2LwtlvPdBXRlGop0qXpcDrLvchXSK8QCalucviXxcYIgAyNNkYa+rq8OUQqLdiqW+LppK/T4TrKGX5zIUdNqcvcu2dS88oFHBTEErn5g9CPb28pX4hkUyP3lfn0lb0csXt4TExqxMygdGDrhXGh0qsAYr4N5mf8T1RU+GMrlMJP+/KLEWyonaKWeYmEh7cY19zI9N1vxGTavcZ912rsFpFie29PkZtUk2+BXwvnzEODZoobGzMOSpr4="
-  app: smallbizhack-text2image
-  on:
-    branch: master
+    secure: "Olo4UQZ/SUkRMJTDkAsadILurT9SGCQCIhZfLv+2fgp5GYPxl1HqMEf1NUxbKUl3csubqGoIxA19vcPLvJgR7XF/H+vKrNPyJyHLviOUREfCQ+VsdP29eIBYhwvCSt/zeDWT8z/lAgZxfz9r2BV6vbb5k6RUNCr+1RMBFi89RS+raUHdcBV0lsRHxtUjkzkkJ00o6bSAxZlF5S9p3GMzoMDdv6u0rSoPU+QLY9xYBThcqsvkGygz04l5PBTgviA6uxiRThSKW7rfkh0gTvN9fFvA87U+mWew+vgMCXARYxXKv/8dYbQ9Dv0aWodYE/tqUUU9j2kejj5w0P+Q1DZKnLh3WZLq8RRbMdLT9QnX6EiGedg07W6dj1tUtfbrySvq6IGGfaUiVVeZWDHN5iUe3GsYljjGV8ettj2S8brrQzbHd2DVPT7d0EvPvRiEHa+dikDlGRi0mPSQLTD3AbnLaIPeNT79Vw7FR7eC8zWNu8qfC1vJwKESzFAyvykDwwekdWWPOb6/BBqwtN5MrPNUm2K3ssYwhPQ7/DPYGuuXuSfqi3DiNNsmOQGFV/eeERUIcWjE3Tb9+beKR5arnRSiWeC1usDgwD1UljS3NH0mQBAFvD3GfCCo2z+lHLq3Z0veMB3OFRrPFt4cNOQe9lN2mQnwGxixBfgZ2re1jjlOmSU="
+  app: lexii-backend
