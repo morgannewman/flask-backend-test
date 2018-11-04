@@ -3,8 +3,4 @@ gunicorn
 flask_cors
 
 requests
-json
-re
-operator
 six
-collections
