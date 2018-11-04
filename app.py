@@ -1,9 +1,11 @@
 from flask import Flask
-import request
+from flask import request
+from flask import jsonify
+
+#import request
 import json
 
 app = Flask(__name__)
-
 
 # @app.route('/json-example', methods=['POST'])  # GET requests will be blocked
 # def json_example():
@@ -28,16 +30,18 @@ app = Flask(__name__)
 
 
 
-@app.route('/home', methods=('GET', 'POST'))
+@app.route('/home', methods=['GET', 'POST'])
 def request_handler():
     if request.method == 'POST':
-        data = json.loads(request.body['content'])
-        print data
-        return json.dumps({'Hello': 'World'})
+        data = request.get_json()
+        # HERE WE HAVE CONTENT TO PARSE
+        # INSERT MAGIC FUNCTION TO DO MAGIC THINGS HERE
+        response = {'PLACEHOLDER': 'DATA'}
+        return jsonify(response), 201
 
     #return render_template(<template name e.g. xyz.html>, posts=data)
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+    app.run()
 
 
