@@ -1,0 +1,13 @@
+language: python
+install:
+  - pip install -r requirements.txt
+# command to run tests
+script:
+  - echo "What tests?! This is a hackathon!" && exit 0
+deploy:
+  provider: heroku
+  api_key:
+    secure: "vXUyN5S5mnwADMlApZtRNXWfGmc1vSaLicFezqHI1k9HIF1m4a2/nE2vOY6pXDsR78rYlklEkxCrr/s7iUXdj1T6hVV+JJyjhy+Qii9GGKfWrviuZErooJ/tOzK4kc8YMLkzmQIFKx4fSGc6HJZQ+V5ZD42QTCxiP9DnC8MM88CWagzzCfgovrxpBNh3VVNspYlBdPTCwvr52uDKZ0Hh/R8Gs0NS79BBKdQeG7J097ksLnPhPDY36eXWqd51fKx31at29wchp6puAiupH+lGyr/wQmpWMbKdTgpVM1ZDeDlX9w+0wNiqhqwE7sKBH1LUGzfaJl1XHXdxldJkDg939CFGRdTZRA/cgprlqA+Jc6JHtB0mxD4us00xWZDPCxCbG5Pb7z+C+9eK5+Oa0YhQksJal7Nn7bNh3dJk1wWj7eoTaX/8wHkS2LwtlvPdBXRlGop0qXpcDrLvchXSK8QCalucviXxcYIgAyNNkYa+rq8OUQqLdiqW+LppK/T4TrKGX5zIUdNqcvcu2dS88oFHBTEErn5g9CPb28pX4hkUyP3lfn0lb0csXt4TExqxMygdGDrhXGh0qsAYr4N5mf8T1RU+GMrlMJP+/KLEWyonaKWeYmEh7cY19zI9N1vxGTavcZ912rsFpFie29PkZtUk2+BXwvnzEODZoobGzMOSpr4="
+  app: smallbizhack-text2image
+  on:
+    branch: master
