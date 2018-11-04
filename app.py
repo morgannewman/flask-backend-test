@@ -1,5 +1,6 @@
 from flask import Flask
-import requests
+import request
+import json
 
 app = Flask(__name__)
 
@@ -30,10 +31,10 @@ app = Flask(__name__)
 @app.route('/home', methods=('GET', 'POST'))
 def request_handler():
     if request.method == 'POST':
-        url = request.form['url']
-        r = requests.get(url)
-        data = r.json()
+        data = json.loads(request.body['content'])
         print data
+        return json.dumps({'Hello': 'World'})
+
     #return render_template(<template name e.g. xyz.html>, posts=data)
 
 if __name__ == '__main__':
