@@ -3,6 +3,9 @@ from flask import request
 from flask import jsonify
 from flask_cors import CORS
 import json
+import sys
+sys.path.insert(0, './magic/')
+from keyword_extractor import text2images
 
 # spin up Flask app
 app = Flask(__name__)
@@ -16,7 +19,8 @@ def request_handler():
         print data
         # HERE WE HAVE CONTENT TO PARSE
         # INSERT MAGIC FUNCTION TO DO MAGIC THINGS HERE
-        response = jsonify({'PLACEHOLDER': 'DATA'})
+        images = text2images(data)
+        response = jsonify(images)
         response.headers.add('Access-Control-Allow-Origin', '*')
         return response, 201
     else: 
