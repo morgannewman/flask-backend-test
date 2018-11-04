@@ -16,7 +16,7 @@ CORS(app, resources={r"/*": {"origins": "*"}}, send_wildcard=True)
 def request_handler():
     if request.method == 'POST':
         data = (request.get_json())['content']
-        print data
+        # print data
         # HERE WE HAVE CONTENT TO PARSE
         # INSERT MAGIC FUNCTION TO DO MAGIC THINGS HERE
         images = text2images(data)
